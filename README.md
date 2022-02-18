@@ -4,9 +4,8 @@ A clone of gojek interface
 
 <p style="float:left">
    <img src="https://github.com/muhammadgimnastiar/gojek-clone-flutter/blob/master/lib/assets/sreenshoot/Screenshot_1645192246.png" width="30%"/>
-   <img src="https://github.com/muhammadgimnastiar/gojek-clone-flutter/blob/master/lib/assets/sreenshoot/Screenshot_1645192259.png" width="30%"/>
    <img src="https://github.com/muhammadgimnastiar/gojek-clone-flutter/blob/master/lib/assets/sreenshoot/Screenshot_1645192254.png" width="30%"/>
-   
+   <img src="https://github.com/muhammadgimnastiar/gojek-clone-flutter/blob/master/lib/assets/sreenshoot/Screenshot_1645192259.png" width="30%"/>
    </p>
 
 
