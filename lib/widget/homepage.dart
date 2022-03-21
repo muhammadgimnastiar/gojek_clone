@@ -296,59 +296,66 @@ class IconList extends StatelessWidget {
   const IconList({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      physics: const BouncingScrollPhysics(),
-      shrinkWrap: true,
-      crossAxisCount: 4,
-      children: const [
-        IconMenu(
-          "GoRide",
-          icon: "lib/assets/icon/goride.png",
-          color: Colors.black87,
-          size: 40,
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: const [
+            IconMenu(
+              "GoRide",
+              icon: "lib/assets/icon/goride.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+            IconMenu(
+              "GoCar",
+              icon: "lib/assets/icon/gocar.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+            IconMenu(
+              "GoFood",
+              icon: "lib/assets/icon/gofood.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+            IconMenu(
+              "GoRide",
+              icon: "lib/assets/icon/gosend.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+          ],
         ),
-        IconMenu(
-          "GoCar",
-          icon: "lib/assets/icon/gocar.png",
-          color: Colors.black87,
-          size: 40,
-        ),
-        IconMenu(
-          "GoFood",
-          icon: "lib/assets/icon/gofood.png",
-          color: Colors.black87,
-          size: 40,
-        ),
-        IconMenu(
-          "GoRide",
-          icon: "lib/assets/icon/gosend.png",
-          color: Colors.black87,
-          size: 40,
-        ),
-        IconMenu(
-          "GoMart",
-          icon: "lib/assets/icon/gomart.png",
-          color: Colors.black87,
-          size: 40,
-        ),
-        IconMenu(
-          "GoPulsa",
-          icon: "lib/assets/icon/gopulsa.png",
-          color: Colors.black87,
-          size: 40,
-        ),
-        IconMenu(
-          "GoClub",
-          icon: "lib/assets/icon/goclub.png",
-          color: Colors.black87,
-          size: 40,
-        ),
-        IconMenu(
-          "GoRide",
-          icon: "lib/assets/icon/other.png",
-          color: Colors.black87,
-          size: 40,
-        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconMenu(
+              "GoMart",
+              icon: "lib/assets/icon/gomart.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+            IconMenu(
+              "GoPulsa",
+              icon: "lib/assets/icon/gopulsa.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+            IconMenu(
+              "GoClub",
+              icon: "lib/assets/icon/goclub.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+            IconMenu(
+              "Lainnya",
+              icon: "lib/assets/icon/other.png",
+              color: Colors.black87,
+              size: 40,
+            ),
+          ],
+        )
       ],
     );
   }
