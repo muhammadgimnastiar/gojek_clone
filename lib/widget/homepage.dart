@@ -187,7 +187,7 @@ class CardGopay extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
                 padding: const EdgeInsets.only(left: 12),
@@ -232,15 +232,15 @@ class CardGopay extends StatelessWidget {
               child: Row(
                 children: const [
                   IconMenu(
-                    "Pay",
+                    "Bayar",
                     icon: "lib/assets/icon/pay.png",
                   ),
                   IconMenu(
-                    "Top Up",
+                    "Isi Saldo",
                     icon: "lib/assets/icon/topup.png",
                   ),
                   IconMenu(
-                    "Explore",
+                    "Lainnya",
                     icon: "lib/assets/icon/explore.png",
                   ),
                 ],

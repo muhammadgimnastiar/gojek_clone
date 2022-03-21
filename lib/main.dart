@@ -13,7 +13,7 @@ class GojekApp extends StatefulWidget {
 }
 
 class _GojekAppState extends State<GojekApp> {
-  List tapBarMenu = ["Home", "Promo", "Pesanan", "Profile"];
+  List tapBarMenu = ["Beranda", "Promo", "Pesanan", "Chat"];
   int selectedIndex = 2;
   int tapBarIndex = 0;
   @override
