@@ -16,7 +16,7 @@ class _HomepageState extends State<Homepage> {
       child: Column(
         children: const [
           SearchBar(),
-          CardGopay(),
+          InfoSaldoGopay(),
           IconList(),
           TitleSection(),
         ],
@@ -62,61 +62,6 @@ class TitleSection extends StatelessWidget {
             text: "Aktifkan dan sambungkan gopay& gopaylater ke tokopedia",
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CardBanner extends StatelessWidget {
-  const CardBanner({Key? key, this.text = "", this.image = ""})
-      : super(key: key);
-
-  final String image;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: Card(
-        elevation: 2,
-        clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: InkWell(
-          onTap: () {},
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Stack(
-                alignment: Alignment.bottomLeft,
-                children: [
-                  Ink.image(
-                    height: 170,
-                    image: AssetImage(image),
-                    fit: BoxFit.fitWidth,
-                  ),
-                ],
-              ),
-              const Padding(
-                padding:
-                    EdgeInsets.only(left: 20, right: 20.0, top: 20, bottom: 10),
-                child: Text(
-                  "Makin Seru",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
-                child: Text(
-                  text,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w400, fontSize: 16),
-                ),
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
@@ -172,8 +117,8 @@ class SearchBar extends StatelessWidget {
   }
 }
 
-class CardGopay extends StatelessWidget {
-  const CardGopay({Key? key}) : super(key: key);
+class InfoSaldoGopay extends StatelessWidget {
+  const InfoSaldoGopay({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -187,13 +132,12 @@ class CardGopay extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-                padding: const EdgeInsets.only(left: 12),
+                padding: const EdgeInsets.only(left: 12, right: 15),
                 margin: const EdgeInsets.only(right: 8),
                 height: 78,
-                width: 140,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8)),
@@ -329,7 +273,7 @@ class IconList extends StatelessWidget {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
+          children: const [
             IconMenu(
               "GoMart",
               icon: "lib/assets/icon/gomart.png",
@@ -357,6 +301,61 @@ class IconList extends StatelessWidget {
           ],
         )
       ],
+    );
+  }
+}
+
+class CardBanner extends StatelessWidget {
+  const CardBanner({Key? key, this.text = "", this.image = ""})
+      : super(key: key);
+
+  final String image;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20),
+      child: Card(
+        elevation: 2,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        child: InkWell(
+          onTap: () {},
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                alignment: Alignment.bottomLeft,
+                children: [
+                  Ink.image(
+                    height: 170,
+                    image: AssetImage(image),
+                    fit: BoxFit.fitWidth,
+                  ),
+                ],
+              ),
+              const Padding(
+                padding:
+                    EdgeInsets.only(left: 20, right: 20.0, top: 20, bottom: 10),
+                child: Text(
+                  "Makin Seru",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w400, fontSize: 16),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
